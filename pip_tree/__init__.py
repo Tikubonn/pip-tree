@@ -85,6 +85,7 @@ def main ():
   parser.add_argument("packages", nargs="*", help="Package names for dump.")
   parser.add_argument("--json", action="store_true", help="Dump information as JSON format.")
   parser.add_argument("--indent", nargs="?", default=2, help="Amount of indentation depth.")
+  parser.add_argument("--dump-root-only", action="store_true", help="If enabled, show root packages only.")
   parser.add_argument("-o", "--output-file", type=Path, help="Path of output file. (default is stdout).")
   parser.add_argument("-v", "--version", action="version", version="%(prog)s 0.1.0")
   args = parser.parse_args()
@@ -93,6 +94,8 @@ def main ():
   else:
     packages = list_pip_installed()
   packageinfos = get_pip_info_tree(packages)
+  if args.dump_root_only: #--dump-root-onlyが真ならば親をもたないパッケージのみ抽出する。
+    packageinfos = [packageinfo for packageinfo in packageinfos if not packageinfo.get("Required-by", [])]
   with open_output_file(args.output_file, "w", encoding="utf-8") as stream:
     if args.json:
       json.dump(packageinfos, stream, indent=args.indent)

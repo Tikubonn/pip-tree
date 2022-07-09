@@ -117,6 +117,31 @@ pip-tree requests --json
 //...
 ```
 
+`--dump-root-only` オプションを指定することで親パッケージの依存関係だけを抽出できるようになりました。
+
+```cmd
+pip-tree --dump-root-only
+```
+
+```txt
+exolib==0.11.0
+  - exofile==0.11.0
+pip-license-gen==0.1.0
+  - pip-tree==0.1.0
+  - requests==2.28.1
+    - certifi==2022.6.15
+    - charset-normalizer==2.1.0
+    - idna==3.3
+    - urllib3==1.26.10
+pip-licenses==3.5.4
+  - PTable==0.9.2
+pipenv==2022.7.4
+  - certifi==2022.6.15
+  - pip==22.1.2
+  - setuptools==58.1.0
+...
+```
+
 その他、細かい部分に関しては `pip-tree -h` コマンドをご参照ください。
 
 ```cmd
