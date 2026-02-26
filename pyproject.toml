@@ -18,7 +18,7 @@ maintainers = [
 ]
 description = "Dump installed package dependencies like as tree."
 readme = "README.md"
-license = "MIT"
+license = "AGPL-3.0"
 license-files = ["LICEN[CS]E"]
 keywords = []
 classifiers = [
