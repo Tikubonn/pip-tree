@@ -1,0 +1,35 @@
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pip-tree"
+version = "0.1.1"
+dependencies = []
+requires-python = ">=3.12"
+authors = [
+  {name = "tikubonn"}
+]
+maintainers = [
+  {name = "tikubonn"}
+]
+description = "Dump installed package dependencies like as tree."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E"]
+keywords = []
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://github.com/tikubonn/pip-tree"
+Documentation = "https://github.com/tikubonn/pip-tree/README.md"
+Repository = "https://github.com/tikubonn/pip-tree.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[project.scripts]
+pip-tree = "pip_tree:main"

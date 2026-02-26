@@ -1,14 +1,18 @@
 
-  # pip-tree 
+# pip-tree
 
-  ![](https://img.shields.io/badge/version-0.1.0-gray)
-  ![](https://img.shields.io/badge/python-3.10-blue)
-  ![](https://img.shields.io/github/license/tikubonn/pip-tree)
+## Overview
+
+![](https://img.shields.io/badge/python-3.10-blue)
+![](https://img.shields.io/github/license/tikubonn/pip-tree)
 
 pip-tree はインストール済みパッケージの依存関係を抽出するコマンドを追加します。
+
+## Usage
+
 パッケージの依存関係を抽出するには `pip-tree` コマンドを実行します。
 
-```cmd
+```shell
 pip-tree
 ```
 
@@ -34,7 +38,7 @@ pip-tree==0.1.0
 抽出するパッケージを指定することもできます（複数選択も可）。
 パッケージが未指定ならばインストールされたすべてのパッケージが検索されます。
 
-```cmd
+```shell
 pip-tree requests
 ```
 
@@ -49,7 +53,7 @@ requests==2.28.1
 pipenv にも対応しています。
 `pipenv shell` もしくは `pipenv run` とともに使用することで pipenv 環境を参照するようになります。
 
-```cmd
+```shell
 pipenv run pip-tree 
 ```
 
@@ -75,7 +79,7 @@ Nuitka==0.9.3
 JSON形式にも対応しています。
 抽出した依存関係を後であれこれするときに便利です。
 
-```cmd
+```shell
 pip-tree requests --json
 ```
 
@@ -119,7 +123,7 @@ pip-tree requests --json
 
 `--dump-root-only` オプションを指定することで親パッケージの依存関係だけを抽出できるようになりました。
 
-```cmd
+```shell
 pip-tree --dump-root-only
 ```
 
@@ -144,16 +148,18 @@ pipenv==2022.7.4
 
 その他、細かい部分に関しては `pip-tree -h` コマンドをご参照ください。
 
-```cmd
+```shell
 pip-tree -h
 ```
 
 ## Install
 
-```cmd
-python setup.py install
+```shell
+pip install .
 ```
 
 ## License 
 
-The MIT License.
+© 2022-2026 tikubonn
+
+opensafer licensed under the [MIT License](./LICENSE).
