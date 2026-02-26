@@ -5,8 +5,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pip-tree"
-version = "0.1.1"
-dependencies = []
+version = "0.2.0"
+dependencies = [
+  "opensafer@git+https://github.com/tikubonn/opensafer.git@v1.0"
+]
 requires-python = ">=3.12"
 authors = [
   {name = "tikubonn"}

@@ -3,8 +3,8 @@
 
 ## Overview
 
-![](https://img.shields.io/badge/python-3.10-blue)
-![](https://img.shields.io/github/license/tikubonn/pip-tree)
+![](https://img.shields.io/badge/Python-3.12-blue)
+![](https://img.shields.io/badge/License-AGPLv3-blue)
 
 pip-tree はインストール済みパッケージの依存関係を抽出するコマンドを追加します。
 
@@ -158,8 +158,20 @@ pip-tree -h
 pip install .
 ```
 
-## License 
+## Donation
+
+<a href="https://buymeacoffee.com/tikubonn" target="_blank"><img src="doc/img/qr-code.png" width="3000px" height="3000px" style="width:150px;height:auto;"></a>
+
+もし本パッケージがお役立ちになりましたら、少額の寄付で支援することができます。<br>
+寄付していただいたお金は書籍の購入費用や日々の支払いに使わせていただきます。
+ただし、これは寄付の多寡によって継続的な開発やサポートを保証するものではありません。ご留意ください。
+
+If you found this package useful, you can support it with a small donation.
+Donations will be used to cover book purchases and daily expenses.
+However, please note that this does not guarantee ongoing development or support based on the amount donated.
+
+## License
 
 © 2022-2026 tikubonn
 
-opensafer licensed under the [MIT License](./LICENSE).
+[pip-tree](https://github.com/tikubonn/pip-tree) licensed under the [AGPLv3](./LICENSE).
