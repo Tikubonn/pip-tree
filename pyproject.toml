@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pip-tree"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
   "opensafer@git+https://github.com/tikubonn/opensafer.git@v1.0"
 ]
