@@ -86,39 +86,102 @@ pip-tree requests --json
 ```txt
 [
   {
-    "Name": "requests",
-    "Version": "2.28.1",
-    "Summary": "Python HTTP for Humans.",
-    "Home-page": "https://requests.readthedocs.io",
-    "Author": "Kenneth Reitz",
-    "Author-email": "me@kennethreitz.org",
-    "License": "Apache 2.0",
-    "Location": "c:\\users\\tikubonn\\appdata\\local\\programs\\python\\python310\\lib\\site-packages",
-    "Requires": [
-      "certifi",
-      "charset-normalizer",
-      "idna",
-      "urllib3"
+    "metadata_version": "2.4",
+    "name": "requests",
+    "version": "2.32.5",
+    "summary": "Python HTTP for Humans.",
+    "home_page": "https://requests.readthedocs.io",
+    "author": "Kenneth Reitz",
+    "author_email": "me@kennethreitz.org",
+    "license": "Apache-2.0",
+    "project_url": [
+      "Documentation, https://requests.readthedocs.io",
+      "Source, https://github.com/psf/requests"
     ],
-    "Required-by": [
-      "pip-license-gen"
+    "classifier": [
+      "Development Status :: 5 - Production/Stable",
+      "Environment :: Web Environment",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: Apache Software License",
+      "Natural Language :: English",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.9",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Internet :: WWW/HTTP",
+      "Topic :: Software Development :: Libraries"
     ],
-    "Dependencies": [
+    "requires_python": ">=3.9",
+    "description_content_type": "text/markdown",
+    "license_file": "LICENSE",
+    "requires_dist": [
+      "charset_normalizer<4,>=2",
+      "idna<4,>=2.5",
+      "urllib3<3,>=1.21.1",
+      "certifi>=2017.4.17",
+      "PySocks!=1.5.7,>=1.5.6; extra == \"socks\"",
+      "chardet<6,>=3.0.2; extra == \"use-chardet-on-py3\""
+    ],
+    "provides_extra": [
+      "security",
+      "socks",
+      "use-chardet-on-py3"
+    ],
+    "dynamic": [
+      "author",
+      "author-email",
+      "classifier",
+      "description",
+      "description-content-type",
+      "home-page",
+      "license",
+      "license-file",
+      "project-url",
+      "provides-extra",
+      "requires-dist",
+      "requires-python",
+      "summary"
+    ],
+    "description": "# Requests\n\n**Requests** is a simple, yet elegant, HTTP library.\n\n```python\n>>> import requests\n>>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))\n>>> r.status_code\n200\n>>> r.headers['content-type']\n'application/json; charset=utf8'\n>>> r.encoding\n'utf-8'\n>>> r.text\n'{\"authenticated\": true, ...'\n>>> r.json()\n{'authenticated': True, ...}\n```\n\nRequests allows you to send HTTP/1.1 requests extremely easily. There\u2019s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data \u2014 but nowadays, just use the `json` method!\n\nRequests is one of the most downloaded Python packages today, pulling in around `30M downloads / week`\u2014 according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `1,000,000+` repositories. You may certainly put your trust in this code.\n\n[![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)\n[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)\n[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)\n\n## Installing Requests and Supported Versions\n\nRequests is available on PyPI:\n\n```console\n$ python -m pip install requests\n```\n\nRequests officially supports Python 3.9+.\n\n## Supported Features & Best\u2013Practices\n\nRequests is ready for the demands of building robust and reliable HTTP\u2013speaking applications, for the needs of today.\n\n- Keep-Alive & Connection Pooling\n- International Domains and URLs\n- Sessions with Cookie Persistence\n- Browser-style TLS/SSL Verification\n- Basic & Digest Authentication\n- Familiar `dict`\u2013like Cookies\n- Automatic Content Decompression and Decoding\n- Multi-part File Uploads\n- SOCKS Proxy Support\n- Connection Timeouts\n- Streaming Downloads\n- Automatic honoring of `.netrc`\n- Chunked HTTP Requests\n\n## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)\n\n[![Read the Docs](https://raw.githubusercontent.com/psf/requests/main/ext/ss.png)](https://requests.readthedocs.io)\n\n## Cloning the repository\n\nWhen cloning the Requests repository, you may need to add the `-c\nfetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit timestamp (see\n[this issue](https://github.com/psf/requests/issues/2690) for more background):\n\n```shell\ngit clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git\n```\n\nYou can also apply this setting to your global Git config:\n\n```shell\ngit config --global fetch.fsck.badTimezone ignore\n```\n\n---\n\n[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)\n",
+    "_dependencies": [
       {
-        "Name": "certifi",
-        "Version": "2022.6.15",
-        "Summary": "Python package for providing Mozilla's CA Bundle.",
-        "Home-page": "https://github.com/certifi/python-certifi",
-        "Author": "Kenneth Reitz",
-        "Author-email": "me@kennethreitz.com",
-        "License": "MPL-2.0",
-        "Location": "c:\\users\\tikubonn\\appdata\\local\\programs\\python\\python310\\lib\\site-packages",
-        "Required-by": [
-          "pipenv",
-          "requests"
-        ]
-      },
-//...
+        "metadata_version": "2.4",
+        "name": "certifi",
+        "version": "2026.1.4",
+        "summary": "Python package for providing Mozilla's CA Bundle.",
+        "home_page": "https://github.com/certifi/python-certifi",
+        "author": "Kenneth Reitz",
+        "author_email": "me@kennethreitz.com",
+        "license": "MPL-2.0",
+        "project_url": [
+          "Source, https://github.com/certifi/python-certifi"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+          "Natural Language :: English",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.7",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14"
+        ],
+...
 ```
 
 その他、細かい部分に関しては `pip-tree -h` コマンドをご参照ください。
