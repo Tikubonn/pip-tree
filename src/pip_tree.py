@@ -24,7 +24,7 @@ class _PIPTree:
     self.package_dependency_table = {}
     self.package_table = {}
 
-  def list_installed_package () -> list[str]:
+  def list_installed_package (self) -> list[str]:
     process = subprocess.run(
       ["pip", "freeze"],
       stdin=subprocess.DEVNULL,
